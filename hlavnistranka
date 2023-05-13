@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maxim Kudela Digitalizace</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,700&display=swap">
+    <style>
+        /* Base styles */
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+        .navbar {
+            background-color: #c0bcbc;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 30px;
+        }
+        .navbar-brand {
+            font-weight: bold;
+        }
+        .navbar-menu {
+            display: flex;
+        }
+        .navbar-menu a {
+            text-decoration: none;
+            color: black;
+            padding: 8px 16px;
+        }
+        .navbar-menu a:hover {
+            color: white;
+        }
+        .hamburger-menu {
+            display: none;
+            cursor: pointer;
+        }
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .navbar-menu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                right: 30px;
+                background-color: #c0bcbc;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+                padding: 10px;
+            }
+            .navbar-menu a {
+                padding: 10px;
+            }
+            .hamburger-menu {
+                display: block;
+            }
+        }
+        /* Hero section styles */
+        .hero-section {
+            background-color: #201c1c;
+            text-align: center;
+            padding: 150px 0 30px 0;
+        }
+        .hero-text {
+            color: white;
+            font-size: 48px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+        .subheading-text {
+            color: white;
+            font-size: 24px;
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        /* Button styles */
+        .apple-button {
+            display: block;
+            width: 350px;
+            height: 50px;
+            margin: 0 auto 30px auto;
+            background-color: #007aff;
+            color: white;
+            text-align: center;
+            line-height: 50px;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .apple-button:hover {
+            background-color: #005fbf;
+        }
+        /* Teacher link section styles */
+        .teacher-link-section {
+            background-color: white;
+            text-align: center;
+            padding: 30px 0;
+        }
+        .teacher-link-button {
+            display: inline-block;
+            padding: 15px 40px;
+            background-color: #007aff;
+            color: white;
+            text-align: center;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .teacher-link-button:hover {
+            background-color: #005fbf;
+        }
+        /* End of responsive styles */
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="navbar-brand">Maxim Kudela Digitalizace</div>
+        <div class="hamburger-menu" onclick="toggleMenu()">
+            &#9776;
+        </div>
+        <div class="navbar-menu">
+            <a href="http://kudelamaxim.euweb.cz/">Úvod</a>
+            <a href="http://kudelamaxim.euweb.cz/mojeprace.html">Moje projekty</a>
+            <a href="http://kudelamaxim.euweb.cz/omne.html">O mně</a>
+            <a href="http://kudelamaxim.euweb.cz/kontakt.html">Kontakt</a>
+        </div>
+    </div>
+    <!-- Navbar menu toggle script -->
+    <script>
+        function toggleMenu() {
+            var menu = document.querySelector(".navbar-menu");
+            if (menu.style.display === "flex") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "flex";
+            }
+        }
+    </script>
+    <!-- Hero section -->
+    <div class="hero-section">
+        <div class="hero-text">KUDELA MAXIM</div>
+        <div class="subheading-text">DIGITALIZACE PROJEKTŮ</div>
+        <a href="http://kudelamaxim.euweb.cz/mojeprace.html" class="apple-button">Moje práce</a>
+    </div>
+    <!-- Teacher link section -->
+    <div class="teacher-link-section">
+        <a href="https://sites.google.com/view/irspcv" class="teacher-link-button" target="_blank">Odkaz na stránky pana učitele Skarky</a>
+        <P>INFORMACE</P>
+        <p>JE MOŽNÉ ŽE SE V BUDOUCÍCH MĚSÍCÍCH STANE ŽE PŘEJDU NA JINÉ WEBOVÉ STRÁNKY</p>
+        <P>Z DŮVODU FORMÁTU TOHOTO POSKYTOVATELE</P>
+        <P>ODKAZ BUDE V TOM PŘÍPADĚ ZDE</P>
+        <p>↓</p>
+    </div>
+</body>
+</html>
